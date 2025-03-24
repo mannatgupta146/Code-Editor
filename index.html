@@ -1,35 +1,51 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Live Code Editor</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="container">
-        <div class="left">
-            <div class="box">
-                <label for="html-code"><i class="fa-brands fa-html5"></i> HTML</label>
-                <textarea id="html-code" aria-label="HTML Editor"></textarea>
+        <div class="editor-panel">
+            <!-- HTML Editor -->
+            <div class="editor-box">
+                <label class="editor-label">
+                    <i class="fa-brands fa-html5"></i>
+                    HTML
+                </label>
+                <textarea id="html-code" placeholder="Enter HTML here..."></textarea>
             </div>
 
-            <div class="box">
-                <label for="css-code"><i class="fa-brands fa-css3-alt"></i> CSS</label>
-                <textarea id="css-code" aria-label="CSS Editor"></textarea>
+            <!-- CSS Editor -->
+            <div class="editor-box">
+                <label class="editor-label">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    CSS
+                </label>
+                <textarea id="css-code" placeholder="Enter CSS here..."></textarea>
             </div>
 
-            <div class="box">
-                <label for="js-code"><i class="fa-brands fa-js"></i> JavaScript</label>
-                <textarea id="js-code" aria-label="JavaScript Editor"></textarea>
+            <!-- JavaScript Editor -->
+            <div class="editor-box">
+                <label class="editor-label">
+                    <i class="fa-brands fa-js"></i>
+                    JavaScript
+                </label>
+                <textarea id="js-code" placeholder="Enter JavaScript here..."></textarea>
             </div>
         </div>
 
-        <div class="right">
-            <label for="output"><i class="fa-solid fa-play"></i> Output</label>
-            <iframe id="output"></iframe>
+        <!-- Output Preview -->
+        <div class="preview-panel">
+            <label class="preview-label">
+                <i class="fa-solid fa-play"></i>
+                Live Preview
+            </label>
+            <iframe id="output" title="Live Code Preview"></iframe>
         </div>
     </div>
 

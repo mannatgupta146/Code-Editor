@@ -1,36 +1,41 @@
-function run() {
-    let htmlCode = document.getElementById("html-code").value;
-    let cssCode = document.getElementById("css-code").value;
-    let jsCode = document.getElementById("js-code").value;
-    let output = document.getElementById("output");
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const editors = {
+        html: document.getElementById('html-code'),
+        css: document.getElementById('css-code'),
+        js: document.getElementById('js-code'),
+        output: document.getElementById('output')
+    };
 
-    const documentContent = `
-        <html>
-            <head>
-                <style>${cssCode}</style>
-            </head>
-            <body>
-                ${htmlCode}
-                <script>
-                    try {
-                        ${jsCode}
-                    } catch (error) {
-                        console.error(error);
-                    }
-                </script>
-            </body>
-        </html>`;
+    // Debounce function for better performance
+    const debounce = (callback, delay = 300) => {
+        let timeout;
+        return (...args) => {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => callback(...args), delay);
+        };
+    };
 
-    output.contentDocument.open();
-    output.contentDocument.write(documentContent);
-    output.contentDocument.close();
-}
+    const updatePreview = () => {
+        try {
+            const html = editors.html.value;
+            const css = `<style>${editors.css.value}</style>`;
+            const js = editors.js.value;
+            
+            const doc = editors.output.contentDocument;
+            doc.open();
+            doc.write(`${html}${css}<script>${js}<\/script>`);
+            doc.close();
+        } catch (error) {
+            console.error('Error updating preview:', error);
+        }
+    };
 
-// Debounce function to prevent excessive function calls on keyup
-let timeout;
-document.querySelectorAll("textarea").forEach((textarea) => {
-    textarea.addEventListener("keyup", () => {
-        clearTimeout(timeout);
-        timeout = setTimeout(run, 500);
-    });
+    // Event listeners with debouncing
+    editors.html.addEventListener('input', debounce(updatePreview));
+    editors.css.addEventListener('input', debounce(updatePreview));
+    editors.js.addEventListener('input', debounce(updatePreview));
+
+    // Initial preview
+    updatePreview();
 });
