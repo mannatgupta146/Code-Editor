@@ -1,6 +1,8 @@
 # Code Editor
+This Live Code Editor is a real-time coding playground where users can write HTML, CSS, and JavaScript and instantly see the output. It provides a seamless and interactive environment for web development, making it easier to experiment, learn, and debug code.
 
-![Editor Preview](https://i.imgur.com/editor-screenshot.png)  
+
+![Editor Preview](image.png)  
 *A modern live-coding environment for web development*
 
 ## Features
