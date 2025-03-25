@@ -17,22 +17,12 @@
 | Reset | ↻ | Clear all code (with confirmation) |
 | Fullscreen | ⛶ | Maximize preview panel |
 
-### Themes
-![Theme Comparison](https://i.imgur.com/theme-comparison.png)  
-*Switch between light/dark modes*
-
-## 🚀 Quick Start
+## Quick Start
 1. Open `index.html` in any browser
 2. Start typing code - see changes instantly!
 3. Use the control buttons when needed
 
-**Pro Tip**: Right-click preview to inspect elements!
-
-## See It in Action
-![Screen Recording](https://i.imgur.com/editor-demo.gif)  
-*Live editing demonstration*
-
-## 🤝 How to Contribute
+## How to Contribute
 We welcome design and feature improvements!  
 **Suggested enhancements**:
 - Add syntax error highlighting
@@ -44,4 +34,5 @@ We welcome design and feature improvements!
 2. Make your changes  
 3. Submit a pull request with screenshots
 
+**Pro Tip**: Right-click preview to inspect elements!
 ---
