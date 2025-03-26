@@ -36,6 +36,5 @@ We welcome design and feature improvements!
 2. Make your changes  
 3. Submit a pull request with screenshots
 
-
 ---
 **Transform thoughts into code, code into reality! 🌍💻**
