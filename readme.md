@@ -7,12 +7,12 @@ This Live Code Editor is a real-time coding playground where users can write HTM
 
 ## Features
 
-### Visual Editing
+### 1. Visual Editing
 - **Triple-panel interface** (HTML/CSS/JS)
 - **Real-time preview** updates as you type
 - **Syntax-aware highlighting** (colors tags, properties, and functions)
 
-### Interactive Controls
+### 2. Interactive Controls
 | Button | Icon | Action |
 |--------|------|--------|
 | Refresh | 🔄 | Force preview update |
